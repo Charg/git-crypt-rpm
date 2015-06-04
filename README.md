@@ -1,5 +1,11 @@
 # RPM Spec for git-crypt 
-git-crypt spec file created for Fedora 21+ and CentOS+ following the Fedora [packaging guidelines](https://fedoraproject.org/wiki/Packaging:Guidelines?rd=Packaging/Guidelinesa).
+git-crypt spec file created for **Fedora** and **CentOS** following the Fedora [packaging guidelines](https://fedoraproject.org/wiki/Packaging:Guidelines?rd=Packaging/Guidelinesa).
+
+Tested on:
+- Fedora 21
+- Fedora 22
+- CentOS 6
+- CentOS 7
 
 ## Let's build an RPM
 > yum install @development-tools  
