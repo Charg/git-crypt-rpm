@@ -3,8 +3,11 @@ git-crypt spec file created for Fedora 21+ and CentOS+ following the Fedora [pac
 
 ## Let's build an RPM
 > yum install @development-tools
+
 > yum install fedora-packager
+
 > yum install rpmdevtools
+
 > rpmdev-setuptree
 > wget -P ~/rpmbuild/SOURCES/ https://www.agwa.name/projects/git-crypt/downloads/git-crypt-0.5.0.tar.gz
 > git clone ~/rpmbuild/SPECS/
