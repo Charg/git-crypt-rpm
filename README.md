@@ -8,13 +8,12 @@ git-crypt spec file created for **Fedora** and **CentOS** following the Fedora [
 - CentOS 7
 
 ## Let's build an RPM
-> yum install @development-tools  
-> yum install fedora-packager  
-> yum install rpmdevtools  
+> export spec="~/rpmbuild/SPECS"
+> yum install fedora-packager rpmdevtools
 > rpmdev-setuptree  
-> wget -P ~/rpmbuild/SOURCES/ https://www.agwa.name/projects/git-crypt/downloads/git-crypt-0.5.0.tar.gz  
-> git clone https://github.com/Charg/git-crypt-rpm ~/rpmbuild/SPECS/  
-> cd !$  
-> rpmbuild -ba git-crypt-spec  
+> git clone https://github.com/Charg/git-crypt-rpm ${spec}
+> spectool -g -R ${spec}/git-crypt.spec
+> yum-builddep ${spec}/git-crypt.spec
+> rpmbuild -ba ${spec}/git-crypt-spec  
 
 You should now see your git-crypt RPM sitting in `~/rpmbuild/RPMS/x86_64`.
