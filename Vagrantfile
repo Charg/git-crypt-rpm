@@ -28,10 +28,6 @@ Vagrant.configure("2") do |config|
     f21.vm.box = "chef/fedora-21"
   end
 
-  config.vm.define "f20" do |f20|
-    f20.vm.box = "chef/fedora-20"
-  end
-
   config.vm.define "rhel7" do |rhel7|
     rhel7.vm.box = "chef/centos-7.0"
   end
