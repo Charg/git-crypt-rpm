@@ -24,6 +24,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: $build_script, privileged: false
   config.vm.provider "virtualbox"
 
+  config.vm.define "f22" do |f22|
+    f22.vm.box = "bento/fedora-22"
+  end
+
   config.vm.define "f21" do |f21|
     f21.vm.box = "bento/fedora-21"
   end
