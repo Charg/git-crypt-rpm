@@ -25,11 +25,11 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox"
 
   config.vm.define "f21" do |f21|
-    f21.vm.box = "chef/fedora-21"
+    f21.vm.box = "bento/fedora-21"
   end
 
   config.vm.define "rhel7" do |rhel7|
-    rhel7.vm.box = "chef/centos-7.0"
+    rhel7.vm.box = "bento/centos-7.1"
   end
 
   #config.vm.define "rhel6" do |rhel6|
