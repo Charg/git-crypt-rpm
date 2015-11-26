@@ -3,7 +3,7 @@ $build_script = <<SCRIPT
 #sudo yum install -y @development-tools
 sudo yum install -y yum-utils rpmdevtools git
 rpmdev-setuptree
-git clone https://github.com/Charg/git-crypt-rpm ~/rpmbuild/SPECS/
+cp /vagrant/*.spec ~/rpmbuild/SPECS/
 
 # Download RPM sources
 spectool -g -R ~/rpmbuild/SPECS/git-crypt.spec
@@ -22,7 +22,6 @@ SCRIPT
 
 Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: $build_script, privileged: false
-  config.vm.synced_folder '.', '/vagrant', disabled: true
   config.vm.provider "virtualbox"
 
   config.vm.define "f21" do |f21|
