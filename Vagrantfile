@@ -1,7 +1,7 @@
 $build_script = <<SCRIPT
 
 #sudo yum install -y @development-tools
-sudo yum install -y yum-utils rpmdevtools git
+sudo yum install -y yum-utils rpmdevtools git make
 rpmdev-setuptree
 cp /vagrant/*.spec ~/rpmbuild/SPECS/
 
@@ -23,6 +23,10 @@ SCRIPT
 Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: $build_script, privileged: false
   config.vm.provider "virtualbox"
+
+  config.vm.define "f23" do |f23|
+    f23.vm.box = "fedora/23-cloud-base"
+  end
 
   config.vm.define "f22" do |f22|
     f22.vm.box = "bento/fedora-22"
