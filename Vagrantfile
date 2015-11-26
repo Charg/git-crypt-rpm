@@ -15,7 +15,7 @@ sudo yum-builddep -y ~/rpmbuild/SPECS/git-crypt.spec
 rpmbuild -ba ~/rpmbuild/SPECS/git-crypt.spec
 
 # Install RPM
-sudo yum install -y ~/rpmbuild/RPMS/x86_64/git-crypt-0.5.0-1.*.x86_64.rpm
+sudo yum install -y ~/rpmbuild/RPMS/x86_64/git-crypt-0.5.0*.x86_64.rpm
 
 SCRIPT
 
