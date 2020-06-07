@@ -36,7 +36,7 @@ make install PREFIX=%{buildroot}%{_prefix}
 
 
 %changelog
-* Wed Jun 03 2015 Chris Argeros <chris@argeros.org> - 0.5.0
-- Created initial spec
 * Mon Jun 08 2020 Marc Jay <marc@marcjay.co.uk> - 0.6.0
 - Updated to version 0.6.0
+* Wed Jun 03 2015 Chris Argeros <chris@argeros.org> - 0.5.0
+- Created initial spec
